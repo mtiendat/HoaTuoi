@@ -1,0 +1,28 @@
+@media (min-width:1440px){
+	.container-fluid{max-width:1400px!important;}
+}
+
+@media only screen and (max-width: 991px) {
+	.title-sec:after {
+   		content: "";
+	    width: 0px;
+	    height: 2px;
+	    position: absolute;
+	    bottom: -50px;
+	    right: -100%;
+	    background-color: #257bd4;
+	}
+	#header .head-menu .main-menu ul{
+		display: none;
+	}
+	#header .head-menu .main-menu ul li{
+		display: inline-block;
+		width: 100%;
+	}
+	.top-main .tuyendung,.top-main .tao-cv,.top-main .dangky,.top-main .dangnhap{
+		margin-bottom: 10px;
+	}
+	#header .head-menu .menu-responsive{
+	  display: block;
+	}
+}

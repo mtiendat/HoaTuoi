@@ -1,0 +1,1 @@
+<p class="text-center"><a href="viewcart.php"><i class="fa fa-shopping-cart shopping-cart" aria-hidden="true"></i><span class="count-cart"><?php if(isset($_SESSION['cart'])){echo count($_SESSION['cart']);} else{ echo "0";}?></span></a></p>

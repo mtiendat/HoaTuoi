@@ -8,11 +8,11 @@
 				</div>
 				<div class="col-md-4 text-right">
 					<a href="/hoatuoi/admin.php?tab=add-product">
-						<button class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Thêm Hoa</button>
+						<button class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Thêm Hoa</button>
 					</a>
 				</div>
 			</div>
-			<table class="table table-bordered table-striped">
+			<table class="table table-bordered table-striped" style="margin-top: 8px">
 				<thead class="thead-dark">
 					<tr>
 						<th>#</th>

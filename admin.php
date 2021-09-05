@@ -19,14 +19,14 @@
       <span>Đóng</span>
     </a>
     <div class="logo">
-      Quản Lý Shop Hoa <button type="button" id="btn-logout" class="btn btn-danger" style="float:right; margin-top:6px; margin-right:14px"><i class="fa fa-sign-out">Đăng xuất</i></button>
+      Quản Lý Shop Hoa <button type="button" id="btn-logout" class="btn btn-danger" style="float:right; margin-top:6px; margin-right:14px"><i class="fa fa-sign-out"> Đăng xuất</i></button>
     </div>
   </div>
   <div class="sidebar">
     <ul>
       <li><a href="admin.php?tab=qlsp"><i class="fa fa-archive"></i><span>Quản lý Hoa</span></a></li>
       <li><a href="admin.php?tab=donhang"><i class="fa fa-envelope"></i><span>Đơn hàng</span></a></li>
-      <li><a href="admin.php?tab=donhang"><i class="fa fa-envelope"></i><span>Nhân viên</span></a></li>
+      <li><a href="admin.php?tab=nhanvien"><i class="fa fa-user"></i><span>Nhân viên</span></a></li>
   </div>
 
   <!-- Content -->
@@ -47,6 +47,9 @@
             }
             if ($_GET['tab'] == 'donhang') {
               include 'admin/admin_duyetdonhang.php';
+            }
+            if ($_GET['tab'] == 'nhanvien') {
+              include 'admin/admin_nhanvien.php';
             }
             if ($_GET['tab'] == 'duyetdonhang') {
               include 'admin/execute/donhang.php';

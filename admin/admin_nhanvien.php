@@ -12,7 +12,7 @@
                         <th>SDT</th>
 					    <th>Địa chỉ</th>
 						<th>Giới Tính</th>
-                        <th></th>
+                        <th>Tùy chỉnh</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -40,8 +40,14 @@
                         
                         ?> </td>
 						<td style="width: 300px">
-                        <button class="btn btn-warning"><i class="fa fa-edit" aria-hidden="true"></i> Sửa</button>
-                        <button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</button>
+						<div>
+								<a href="admin/execute/edit.php?mahoa=<?php echo $NHANVIEN['TEN_NV'];?>">
+									<button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</button>
+								</a>
+								<a href="admin.php?tab=edit-product&id=<?php echo $NHANVIEN['TEN_NV'];?>">
+									<button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</button>
+								</a>
+							</div>
 						</td>	
 					</tr>
 					

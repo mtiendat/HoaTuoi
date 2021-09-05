@@ -1,9 +1,16 @@
 <div class="container-fluid">
 	
 	<div class="row">
-		<div class="col-md-12">
-			<h4>Danh Sách Nhân Viên</h4>
-			<table class="table table-bordered">
+		
+		<div class="col-md-8">
+		<h4>Danh Sách Nhân Viên</h4>
+		</div>
+			<div class="col-md-4 text-right">
+					<a href="#">
+						<button class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Thêm Nhân Viên</button>
+					</a>
+				</div>
+			<table class="table table-bordered" style="margin-top: 8px">
 				<thead class="thead-dark">
 					<tr>
 						<th>#Mã số</th>

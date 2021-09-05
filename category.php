@@ -23,7 +23,7 @@
 					</div>
 					<div class="lienket">
 						<h4 class="ketnoi">Kết nối với chúng tôi</h4>
-						<p class="d-ketnoi">Hãy là một người bạn của shop hoa  để cùng nhau san sẽ mọi kiến thức về hoa, kết nối với chúng tôi để có thêm nhiều thông tin nhất....</p>
+						<p class="d-ketnoi">Hãy là một người bạn của cửa hàng hoa  để cùng nhau san sẽ mọi kiến thức về hoa, kết nối với chúng tôi để có thêm nhiều thông tin nhất....</p>
 						<p class="text-center"><button type="" class="btn btn90">Kết nối</button></p>
 					</div>
 					

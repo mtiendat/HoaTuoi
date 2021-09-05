@@ -18,11 +18,11 @@
 		</div>
 		<div>
 			<i class="fa fa-phone"></i>
-			<p> (+84) 093 919 5205</p>
+			<p> (+84) 0939004357</p>
 		</div>
 		<div>
 			<i class="fa fa-envelope"></i>
-			<p><a href="#"> ngphuonghp1984@gmail.com</a></p>
+			<p><a href="#"> huynhchitdn@gmail.com</a></p>
 		</div>
 	</div>
 	<div class="footer-right col-md-4 col-sm-6">

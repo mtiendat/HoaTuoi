@@ -26,7 +26,7 @@
 		<div class="top-head container-fluid">
 			<div class="row">
 				<div class="col-md-6">
-					<p class="head-description">SHOP BÁN HOA UY TÍN SỐ 1 TRÊN THẾ GIỚI...</p>
+					<p class="head-description">CỬA HÀNG BÁN HOA TƯƠI</p>
 				</div>
 				<div class="col-md-6">
 				 	<p class="text-right text-right-2">

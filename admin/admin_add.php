@@ -107,6 +107,7 @@
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 $insert = "INSERT INTO hoa(MA_HOA, MA_CD, MA_LOAIHOA, MA_NCC, TEN_HOA, MAUSAC, GIABAN, YNGHIA, CHITIET, URL_IMG, DISABLE) VALUES ('$ID','$chude','$type','$provider','$name','$color','$price','$mean','$content','$target_file',0)";
                 mysqli_query($con,$insert);
+                header('location:admin.php');
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }

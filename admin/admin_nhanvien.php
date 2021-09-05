@@ -41,10 +41,10 @@
                         ?> </td>
 						<td style="width: 300px">
 						<div>
-								<a href="admin/execute/edit.php?mahoa=<?php echo $NHANVIEN['TEN_NV'];?>">
+								<a href="#">
 									<button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</button>
 								</a>
-								<a href="admin.php?tab=edit-product&id=<?php echo $NHANVIEN['TEN_NV'];?>">
+								<a href="#">
 									<button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</button>
 								</a>
 							</div>

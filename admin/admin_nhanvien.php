@@ -6,10 +6,14 @@
 		<h4>Danh Sách Nhân Viên</h4>
 		</div>
 			<div class="col-md-4 text-right">
-					<a href="#">
+			<?php if(!isset($_SESSION['chucvu'])){
+				echo '
+					<a href="/hoatuoi/admin.php?tab=add-nhanvien">
 						<button class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Thêm Nhân Viên</button>
-					</a>
-				</div>
+					</a>';
+				
+			}?>
+			</div>
 			<table class="table table-bordered" style="margin-top: 8px">
 				<thead class="thead-dark">
 					<tr>
@@ -47,14 +51,19 @@
                         
                         ?> </td>
 						<td style="width: 300px">
-						<div>
-								<a href="#">
-									<button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</button>
-								</a>
-								<a href="#">
+						
+						<?php if(!isset($_SESSION['chucvu'])){ //tài khoản là bán hàng k được xóa sửa
+							echo '
+							<div>
+								<button class="btn btn-danger" onclick="deleteCuaHang('.$NHANVIEN["MA_NV"].')"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</button>
+								
+								<a href="admin.php?tab=edit-nhanvien&id='.$NHANVIEN["MA_NV"].'">
 									<button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</button>
 								</a>
 							</div>
+						';
+						}else echo '--'
+								  ?>
 						</td>	
 					</tr>
 					
@@ -75,3 +84,22 @@
 		header("Refresh:0");
     }
 ?>
+<script>
+function deleteCuaHang(id){
+	var r = confirm("Bạn có muốn xóa?");
+	if (r == true) {
+		$.ajax({
+            url: 'admin/execute/xoanhanvien',
+            method: 'GET',
+            data: {
+                'id': id
+            },
+            success:function(data){
+               if(data == 1){
+				   location.reload()
+			   }
+            }
+        });
+	}
+}
+</script>

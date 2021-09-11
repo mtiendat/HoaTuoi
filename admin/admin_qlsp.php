@@ -7,9 +7,12 @@
 					<h4>Danh Sách Hoa</h4>
 				</div>
 				<div class="col-md-4 text-right">
-					<a href="/hoatuoi/admin.php?tab=add-product">
-						<button class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Thêm Hoa</button>
-					</a>
+				<?php if(!isset($_SESSION['chucvu'])){
+					echo '<a href="/hoatuoi/admin.php?tab=add-product">
+					<button class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i> Thêm Hoa</button>
+				</a>';
+				}?>
+					
 				</div>
 			</div>
 			<table class="table table-bordered table-striped" style="margin-top: 8px">
@@ -45,14 +48,18 @@
 						<td><?php echo $FLOWER['TEN_NCC']; ?></td>
 						<td><?php echo number_format($FLOWER['GIABAN']); ?> VNĐ</td>
 						<td>
-							<div>
-								<a href="admin/execute/edit.php?mahoa=<?php echo $FLOWER['MA_HOA'];?>">
-									<button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</button>
-								</a>
-								<a href="admin.php?tab=edit-product&id=<?php echo $FLOWER['MA_HOA'];?>">
-									<button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</button>
-								</a>
-							</div>
+						<?php if(!isset($_SESSION['chucvu'])){
+							echo '<div>
+								
+							<button class="btn btn-danger" onclick="deleteHoa('.$FLOWER['MA_HOA'].')"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</button>
+						
+						<a href="admin.php?tab=edit-product&id='.$FLOWER['MA_HOA'].'">
+							<button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i> Sửa</button>
+						</a>
+						</div>';
+							}else echo '--'//tài khoản là bán hàng k được xóa sửa
+						?>
+						
 						</td>
 					</tr>
 					<?php }?>
@@ -62,3 +69,23 @@
 	</div>
 </div>
 </div>
+<script>
+function deleteHoa(id){
+	var r = confirm("Bạn có muốn xóa?");
+	if (r == true) {
+		$.ajax({
+            url: 'admin/execute/xoahoa',
+            method: 'GET',
+            data: {
+                'id': id
+            },
+            success:function(data){
+				console.log(data);
+               if(data == 1){
+				   location.reload()
+			   }
+            }
+        });
+	}
+}
+</script>

@@ -29,7 +29,9 @@ body {
 ol,ul {list-style: none;}
 a {text-decoration: none;}
 
-
+#map {
+  height: 100%;
+}
 /* header */
 #header{
   width: 100%;

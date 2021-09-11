@@ -27,10 +27,17 @@
       <li><a href="admin.php?tab=qlsp"><i class="fa fa-archive"></i><span>Quản lý Hoa</span></a></li>
       <li><a href="admin.php?tab=donhang"><i class="fa fa-envelope"></i><span>Đơn hàng</span></a></li>
       <li><a href="admin.php?tab=nhanvien"><i class="fa fa-user"></i><span>Nhân viên</span></a></li>
+      <li><a href="admin.php?tab=cuahang"><i class="fa fa-map"></i><span>Cửa hàng</span></a></li>
   </div>
 
   <!-- Content -->
   <div class="main">
+    <?php
+				if(!empty($_GET['success'])){
+					echo '<input type= "text" id="status" hidden value = '.$_GET['success'].'>';
+				}
+			?>
+
       <?php 
           if (empty($_GET['tab'])) {
             include 'admin/admin_qlsp.php';
@@ -51,11 +58,26 @@
             if ($_GET['tab'] == 'nhanvien') {
               include 'admin/admin_nhanvien.php';
             }
+            if ($_GET['tab'] == 'edit-nhanvien') {
+              include 'admin/admin_edit_nhanvien.php';
+            }
+            if ($_GET['tab'] == 'cuahang') {
+              include 'admin/admin_cuahang.php';
+            }
+            if ($_GET['tab'] == 'add-cuahang') {
+              include 'admin/admin_add_cuahang.php';
+            }
+            if ($_GET['tab'] == 'edit-cuahang') {
+              include 'admin/admin_edit_cuahang.php';
+            }
             if ($_GET['tab'] == 'duyetdonhang') {
               include 'admin/execute/donhang.php';
             }
             if ($_GET['tab'] == 'tatcadonhang') {
               include 'admin/admin_all_dh.php';
+            }
+            if ($_GET['tab'] == 'add-nhanvien') {
+              include 'admin/admin_add_nhanvien.php';
             }
 
           }
@@ -101,4 +123,23 @@
 						});
     })
   });
+  
+</script>
+ <!-- JavaScript -->
+ <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+<!-- Default theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+<!-- Semantic UI theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+<!-- Bootstrap theme -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+
+<script>
+	if($("#status").val() != null){
+		alertify.success($("#status").val());
+    $("#status").val(null);
+	}
 </script>

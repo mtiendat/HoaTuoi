@@ -124,7 +124,7 @@
         else{
             if($_FILES['fileToUpload']['name'] == "") {
                 $SQL_UPDATE = "UPDATE  hoa SET MA_CD = '$chude', MA_LOAIHOA = '$type', MA_NCC = '$provider', TEN_HOA = '$name', MAUSAC = '$color', GIABAN = '$price', YNGHIA = '$mean', CHITIET = '$content' WHERE  MA_HOA = $id";
-                header('location:admin.php');
+                header('location:admin.php?tab=qlsp&success="Cập nhật thành công"');
                 mysqli_query($con, $SQL_UPDATE);
             }else{
                
@@ -132,7 +132,7 @@
                 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                 if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                     $SQL_UPDATE = "UPDATE  hoa SET MA_CD = '$chude', MA_LOAIHOA = '$type', MA_NCC = '$provider', TEN_HOA = '$name', MAUSAC = '$color', GIABAN = '$price', YNGHIA = '$mean', CHITIET = '$content', URL_IMG = '$target_file' WHERE  MA_HOA = $id";
-                    header('location:admin.php');
+                    header('location:admin.php?tab=qlsp&success="Cập nhật thành công"');
                     echo  $SQL_UPDATE;
                     mysqli_query($con, $SQL_UPDATE);
                 } else {

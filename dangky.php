@@ -39,7 +39,6 @@
 						  method: "POST",
 						  data: { user : user },
 						  success : function(response){
-							console.log(response);
 						  	if (response == 1) {
 								$('#error').attr('hidden', false);		
 						  	}if(response == 0){
@@ -88,7 +87,6 @@
 								ten : ten
 							},
 							success : function(response){
-								console.log(response);
 								if(response == "4"){
 									$('#error').attr('hidden', false); //hiện lỗi
 								}else{
@@ -170,7 +168,7 @@
 							$("#sdt").after(required);
 						}
 						kiemtra = false;
-					}else if($("#sdt").val().length>10){
+					}else if($("#sdt").val().length > 10){
 						if(!jQuery('#sdt').hasClass('required1')){
 							$("#sdt").addClass('required1');
 							var required1 = $('<span style="color:red">SDT không hợp lệ</span>');

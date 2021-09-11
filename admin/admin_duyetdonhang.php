@@ -36,7 +36,7 @@
 									<option value="2">Hủy đơn</option>
 									<option value="3">Khách yêu cầu hủy</option>
 								</select>
-								<button type="submit" name="checker" class="btn btn-sm btn-primary"><i class="fa fa-check-circle" aria-hidden="true"></i> Xác Nhận</button>
+								<button type="submit" name="checker"  class="btn btn-sm btn-primary"><i class="fa fa-check-circle" aria-hidden="true"></i> Xác Nhận</button>
 							</form>
 						</td>	
 					</tr>

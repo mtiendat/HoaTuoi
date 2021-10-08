@@ -28,6 +28,7 @@
       <li><a href="admin.php?tab=donhang"><i class="fa fa-envelope"></i><span>Đơn hàng</span></a></li>
       <li><a href="admin.php?tab=nhanvien"><i class="fa fa-user"></i><span>Nhân viên</span></a></li>
       <li><a href="admin.php?tab=cuahang"><i class="fa fa-map"></i><span>Cửa hàng</span></a></li>
+      <li><a href="admin.php?tab=gopy"><i class="fa fa-map"></i><span>Thư góp ý</span></a></li>
   </div>
 
   <!-- Content -->
@@ -78,6 +79,9 @@
             }
             if ($_GET['tab'] == 'add-nhanvien') {
               include 'admin/admin_add_nhanvien.php';
+            }
+            if ($_GET['tab'] == 'gopy') {
+              include 'admin/admin_gopy.php';
             }
 
           }

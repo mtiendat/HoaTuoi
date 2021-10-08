@@ -38,13 +38,13 @@
 				   },
 				  success : function(response){
 					  var data = JSON.parse(response);
-					 
-					alert(data[0]);
+					 if(data[0]){
+						alert(data[0]);
 						if(data[1] == 1){ //admin
 							window.location ="/hoatuoi/admin.php";//admin chuyển hướng đến admin
 						
 						}else window.location ="/hoatuoi";//user chuyển hướng đến trang chủ
-				  
+					 }else $('#error').attr('hidden', false);
 				  }
 				});
 			}

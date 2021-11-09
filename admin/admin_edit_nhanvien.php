@@ -62,7 +62,7 @@
                     
                     </select>
                         <p></p>
-                    <button class="btn btn-primary" type="submit" name="edit">THÊM MỚI</button>
+                    <button class="btn btn-primary" type="submit" name="edit">CẬP NHẬT</button>
                 </div>
             </div>
         </div>

@@ -62,7 +62,7 @@
 function duyetGopY(id){
 	
 		$.ajax({
-            url: 'admin/execute/gopy',
+            url: 'admin/execute/gopy.php',
             method: 'GET',
             data: {
                 'id': id

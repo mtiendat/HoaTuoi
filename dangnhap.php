@@ -37,6 +37,7 @@
 				   	p : p 
 				   },
 				  success : function(response){
+				  	console.log(response);
 					  var data = JSON.parse(response);
 					 if(data[0]){
 						alert(data[0]);

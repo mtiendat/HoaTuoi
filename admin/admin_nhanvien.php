@@ -89,7 +89,7 @@ function deleteCuaHang(id){
 	var r = confirm("Bạn có muốn xóa?");
 	if (r == true) {
 		$.ajax({
-            url: 'admin/execute/xoanhanvien',
+            url: 'admin/execute/xoanhanvien.php',
             method: 'GET',
             data: {
                 'id': id

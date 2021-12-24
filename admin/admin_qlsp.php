@@ -75,7 +75,7 @@ function deleteHoa(id){
 	var r = confirm("Bạn có muốn xóa?");
 	if (r == true) {
 		$.ajax({
-            url: 'admin/execute/xoahoa',
+            url: 'admin/execute/xoahoa.php',
             method: 'GET',
             data: {
                 'id': id

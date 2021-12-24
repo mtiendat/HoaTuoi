@@ -118,7 +118,7 @@
         $type = $_POST['type'];
 
 
-        if ($name =="" || $mean == "" || $price =="" || $content == "") {
+        if ($name =="" || $mean == "" || $price =="") {
             echo "<h5 class='text-danger'>Bạn cần nhập đầy đủ thông tin</h5>";
         }
         else{

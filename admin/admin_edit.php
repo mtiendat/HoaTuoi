@@ -45,7 +45,7 @@
                     
                     
                     <label>Giá:</label>
-                    <input value="<?php echo $PRODUCT['GIABAN'] ?>" required="true" type="text" name="price" value="" placeholder="Nhập giá bán." class="form-control">
+                    <input value="<?php echo $PRODUCT['GIABAN'] ?>" required="true" type="text" name="price" onkeypress="return isNumberKey(event)" value="" placeholder="Nhập giá bán." class="form-control">
 
 
                     <label for="">Chọn loại hoa:</label>
@@ -142,3 +142,12 @@
         }
     }
 ?>
+<script>
+    //Giá chỉ cho nhập số
+    function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : evt.keyCode
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+    return true;
+}
+</script>

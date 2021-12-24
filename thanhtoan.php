@@ -104,7 +104,7 @@
 		success : function(response){
 			
 				alertify
-					.alert("Thông báo",response, function(){
+					.alert("Thông báo","Đặt hàng thành công", function(){
 						window.location ="/hoatuoi/";
 					});
 			

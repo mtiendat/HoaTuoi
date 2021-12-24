@@ -18,7 +18,7 @@
 			<table class="table table-bordered table-striped" style="margin-top: 8px">
 				<thead class="thead-dark">
 					<tr>
-						<th>#</th>
+						<th>STT</th>
 						<th>Hình ảnh</th>
 						<th>Tên Hoa</th>
 						<th>Loại Hoa</th>
@@ -35,7 +35,8 @@
 								INNER JOIN LOAIHOA ON HOA.MA_LOAIHOA = LOAIHOA.MA_LOAIHOA
 								INNER JOIN CHUDE ON HOA.MA_CD = CHUDE.MA_CD 
 								INNER JOIN NHACUNGCAP ON HOA.MA_NCC = NHACUNGCAP.MA_NCC  
-								WHERE HOA.DISABLE = 0";
+								WHERE HOA.DISABLE = 0
+								";
 						$QUERY = mysqli_query($con, $SQL);
 						while($FLOWER = mysqli_fetch_array($QUERY)){
 					?>

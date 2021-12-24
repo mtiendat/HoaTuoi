@@ -22,7 +22,7 @@
 
                     <label>Tên Hoa:</label>
                     <input required="true" value="<?php echo $PRODUCT['TEN_HOA'] ?>" type="text" name="name" value="" placeholder="Nhập tên hoa.." class="form-control">
-                    <?php echo $PRODUCT['YNGHIA'] ?>
+                   
                     <label>Ý nghĩa:</label>
                     <textarea required="true" name="mean" class="form-control" class="mota"><?php echo $PRODUCT['YNGHIA'] ?></textarea>
                 
@@ -84,10 +84,10 @@
                     </select>
 
                     <label>Ảnh hiện tại</label>
-                    <img src="<?php echo $PRODUCT['URL_IMG'];?>" style="width: 120px; height: 120px">
+                    <img src="<?php echo $PRODUCT['URL_IMG'];?>" >
 
 
-                    <label>Chọn ảnh:</label>
+                    <label>Chọn file ảnh mới :</label>
                     <input type="file" name="fileToUpload">
 
                     <br/>

@@ -102,12 +102,12 @@
 			sdt: $("#sdt").val()
 		},
 		success : function(response){
-			if(response == 1){
+			
 				alertify
-					.alert("Thông báo","Đặt hàng thành công", function(){
+					.alert("Thông báo",response, function(){
 						window.location ="/hoatuoi/";
 					});
-			}
+			
 		}
 		});
 	})

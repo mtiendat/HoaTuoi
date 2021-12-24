@@ -66,7 +66,7 @@
                     </select>
 
                     <label>Chọn ảnh:</label>
-                    <input type="file" name="fileToUpload">
+                    <input type="file" name="fileToUpload" required>
                     <br/>
                     <button class="btn btn-primary" type="submit" name="add">THÊM MỚI</button>
                 </div>
@@ -97,7 +97,7 @@
         $CODE = mysqli_fetch_array($QUERY_CODE);
         $ID = $CODE['MA_HOA'] + 1;
 
-        if ($name =="" || $mean == "" || $price =="" || $content == "") {
+        if ($name =="" || $mean == "" || $price =="" ) {
             echo "<h5 class='text-danger'>Bạn cần nhập đầy đủ thông tin</h5>";
         }
         else{
@@ -107,9 +107,9 @@
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
                 $insert = "INSERT INTO hoa(MA_HOA, MA_CD, MA_LOAIHOA, MA_NCC, TEN_HOA, MAUSAC, GIABAN, YNGHIA, CHITIET, URL_IMG, DISABLE) VALUES ('$ID','$chude','$type','$provider','$name','$color','$price','$mean','$content','$target_file',0)";
                 mysqli_query($con,$insert);
-                header('location:admin.php?tab=qlsp&success="Thêm thành công"');
+                header('location:admin.php?tab=qlsp&success="Thêm thành công $ID"');
             } else {
-                echo "Sorry, there was an error uploading your file.";
+                echo "Bạn cần chọn ảnh";
             }
         }
     }

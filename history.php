@@ -81,10 +81,10 @@
                     <p>Người nhận: <strong><?php echo $ORDERS['TENKH_DH'] ?></strong></p>
                     <p>Nơi nhận: <strong><?php echo $ORDERS['DIACHI_DH'] ?></strong></p>
                     <p>Liên hệ: <strong><?php echo $ORDERS['SDT_DH'] ?></strong></p>
-                    <a href="tracking.php?id=<?php echo $ORDERS['MA_DH']; ?>" class="float-right">Xem chi tiết</a>
+                    <a href="tracking.php?id=<?php echo $ORDERS['MA_DH']; ?>"  class="float-right">Xem chi tiết</a>
                     <?php if($ORDERS['DUYET']  == 0){?>
                         <br/>
-                        <a href="execute/cancel-order.php?id=<?php echo $ORDERS['MA_DH']; ?>" class="float-right">Hủy bỏ đơn</a>
+                        <a href="execute/cancel-order.php?id=<?php echo $ORDERS['MA_DH']; ?>" class="float-right"  onclick="return confirm('Bạn có muốn hủy đơn hàng này?')" >Hủy bỏ đơn</a>
                     <?php }?>
                 </li>
                 <?php }}else{?>

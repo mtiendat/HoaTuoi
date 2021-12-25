@@ -64,7 +64,7 @@
 									<td><?php echo number_format($bdt['price']);?> VNĐ</td>
 									<td><?php echo number_format($bdt['price'] *$bdt['quantity']);?> VNĐ</td>
 										
-									<?php $tongtien +=$tongtien + ($bdt['price'] *$bdt['quantity']); ?>
+									<?php $tongtien = $tongtien + ($bdt['price'] *$bdt['quantity']); ?>
 								</tr>
 							<?php } ?>
 						</tbody>

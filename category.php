@@ -17,7 +17,7 @@
 							$query1 = mysqli_query($con,$sql1);
 							while ($row1 = mysqli_fetch_array($query1)) {
 								?>
-								<li><a href="category.php?idcd=<?php  echo $row1['MA_CD'];?>" class="tag1"><span><?php echo $row1['TEN_CD']; ?></span></a></li>
+								<li><a href="category.php?id=<?php  echo $row1['MA_CD'];?>" class="tag1"><span><?php echo $row1['TEN_CD']; ?></span></a></li>
 							<?php }?>
 						</ul>
 					</div>
@@ -36,7 +36,7 @@
 			</div>
 		</section>
 		<div class="phantrang">
-			<p>Chọn trang tiếp theo để xem thêm sản phẩm</p>
+			<!-- <p>Chọn trang tiếp theo để xem thêm sản phẩm</p>
 			
 			<div class="pagination pagination-number">	
 				<ul>
@@ -48,7 +48,7 @@
 					<li class="inactive"><a href="/">›</a></li>
 					<li class="inactive"><a href="/">»</a></li>
 				</ul>
-			</div>
+			</div> -->
 		</div>
 		<!-- END HOA TUOI -->
 	</div>

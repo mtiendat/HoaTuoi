@@ -36,7 +36,7 @@
 				</div>
 			</section>
 			<div class="phantrang">
-				<p>Chọn trang tiếp theo để xem thêm sản phẩm</p>
+				<!-- <p>Chọn trang tiếp theo để xem thêm sản phẩm</p>
 			
 				<div class="pagination pagination-number">	
 					<ul>
@@ -48,7 +48,7 @@
 					  <li class="inactive"><a href="/">›</a></li>
 					  <li class="inactive"><a href="/">»</a></li>
 					</ul>
-				</div>
+				</div> -->
 			</div>
 			<!-- END HOA TUOI -->
 		</div>

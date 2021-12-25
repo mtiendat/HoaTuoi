@@ -96,7 +96,7 @@ function deleteCuaHang(id){
             },
             success:function(data){
                if(data == 1){
-				   location.reload()
+				window.location ="/hoatuoi/admin.php?tab=nhanvien";
 			   }
             }
         });
